@@ -1,0 +1,76 @@
+<html>
+  <head>
+  </head>
+  <h1>Registration Form</h1>
+  <body background="images/images.jpg">
+      <form action = "Register" method ="post">
+       <fieldset>
+        <table>
+            <tr>
+               <td><b>Employee Name:</b></td>
+               <td><input type ="text" id="fname" name="fname" onchange="change()"/><br></td>
+            </tr>
+             <tr>
+             	<td><b>Employee Id:</b></td>
+             	<td><input type ="text" id="lname" name="lname" onchange="change()"/></td>
+             </tr>
+             <tr>
+             	<td><b>Phone Number:</b></td>
+             	<td><input type ="text" id="phone" name="phone" onchange="change2()"/></td>
+             </tr>
+             <tr> 
+             	<td><b>Password:</b></td>
+            <td><input type ="password" id="pwd" name = "pwd"/></td>
+             </tr>
+    <tr>
+             	<td><b>Confirm Password:</b></td>
+             	<td><input type ="password"  id="pwd2 "name="pass1"/></td>
+             </tr>
+               <tr> 
+             	<td><b>Email:</b></td>
+             	<td><input type ="email" id="email" name="email" onchange="change3()" onclick="return confirmPass()"/></td>
+             </tr>
+             <tr>
+           <td>
+           </td>
+                <td><b><input type="submit" value = "SignUp" /></b>
+                <b><a href ="HomePage.html">Home</a></b>
+                </td>
+              </tr>
+         </table>
+         <script>
+               function change() {
+ 	var x = document.getElementById("fname");
+ 	        x.value=x.value.toUpperCase();
+}
+               function change2()
+       	       {
+                 var a=document.getElementById("phone");
+   if((a.value.length!=10) || (isNaN(a.value))){
+ 	    alert("Enter a valid phone number");
+      a.value=''; 
+                  }
+                }
+function change3()
+                {
+              var b=document.getElementById("email");
+              if(b.value.indexOf('@')<1 || (b.value.lastIndexOf('.')<b.value.indexOf('@')+2)  ||  (b.value.lastIndexOf('.')+2>=b.value.length)){
+              alert("Enter a valid email");
+              b.value=''; 
+               }
+  }
+       function confirmPass() 
+          { 
+           var pass = document.getElementById("pwd1").value; 
+           var confPass = document.getElementById("pwd2").value;
+            if(pass != confPass) { 
+               alert("Wrong confirm password !"); 
+              return false; 
+            } 
+         return true;
+        }
+         </script>
+       </fieldset>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+<br>
+<header>
+<h1><center><b>Permission Approval System</b></center></h1>
+</header>
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#fff;">
+   <b><center><input type="submit" name="Employee" value="Employee" onclick="location.href='EmployeeLogin.html'"></center></b>
+<br>
+<img border ="0" src = "images/employee-issues.jpg"  alt = "Employee" width = "300" height = "300">
+  </div>
+  <div class="column" style="background-color:#fff;">
+  <center> <input type="submit" name="Leader" value="Leader" onclick="location.href='Leaderlogin.html'"></center>
+<br>
+<img  border ="0" src = "images/leader.jpg"  alt = "Leader" width = "300" height = "300">
+  </div>
+  <div class="column" style="background-color:#fff;">
+  <center><input type="submit" name="Employee" value="Manager" onclick="location.href='ManagerLogin.html'"></center>
+<br>
+<img border = "0" src = "images/manager.jpg"  alt = "Manager" width = "300" height = "300">
+  </div>
+  <div class="column" style="background-color:#fff;">
+<b><center><input type="submit" name="Contact info" value="Contact info" onclick="location.href='ContactInfo.html'"></b>
+<br>
+<img border="0" src ="images/contact.jpg"   alt = "Contact" width = "300" height = "300">
+  </div>
+</div>
+
+</body>
+</html>
